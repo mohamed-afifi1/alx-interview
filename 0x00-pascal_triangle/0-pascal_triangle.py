@@ -3,6 +3,7 @@
 pascal triange
 """
 
+
 def pascal_triangle(n):
     """
     Generate a Pascal's triangle of size n.
@@ -16,7 +17,7 @@ def pascal_triangle(n):
     if n <= 0:
         return []
     triangle = [[1]]
-    for i in range(1,n):
+    for i in range(1, n):
         triangle.append([])
         triangle[i].append(1)
         for j in range(1, i):
