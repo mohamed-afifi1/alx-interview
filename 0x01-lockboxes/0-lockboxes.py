@@ -9,8 +9,10 @@ def canUnlockAll(boxes):
     checks whether all boxes are posible to unlocked
     """
     visted = [False] * len(boxes)
-
     def dfs(box):
+        """
+        dfs function
+        """
         visted[box] = True
         for neighbor in boxes[box]:
             if not visted[neighbor]:
