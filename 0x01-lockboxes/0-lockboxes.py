@@ -8,6 +8,8 @@ def canUnlockAll(boxes):
     """
     checks whether all boxes are posible to unlocked
     """
+    if boxes is None or len(boxes) == 0:
+        return False
     visted = [False] * len(boxes)
 
     def dfs(box):
