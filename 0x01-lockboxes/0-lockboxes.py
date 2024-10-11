@@ -18,7 +18,7 @@ def canUnlockAll(boxes):
         """
         visted[box] = True
         for neighbor in boxes[box]:
-            if not visted[neighbor] and neighbor <= len(boxes):
+            if not visted[neighbor] and neighbor < len(boxes):
                 dfs(neighbor)
     dfs(0)
     for v in visted:
