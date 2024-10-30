@@ -24,9 +24,8 @@ def validUTF8(data):
         i = check(num)
         if i == 0:
             continue
-        for j in range(1, 10):
+        for j in range(1, i):
             num = data[index + j] % 256
             if not (check(num) == 1):
                 return False
-        index += i - 2
     return True
