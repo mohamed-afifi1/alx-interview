@@ -22,6 +22,8 @@ def validUTF8(data):
     while(index < len(data)):
         num = data[index] % 256
         i = check(num)
+        if (i > 4):
+            return False
         if i == 0:
             index += 1
             continue
@@ -35,7 +37,3 @@ def validUTF8(data):
                 return False
         index += i
     return True
-
-
-data = [197,130,1]
-print(validUTF8(data))
