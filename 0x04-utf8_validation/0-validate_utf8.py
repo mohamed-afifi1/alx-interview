@@ -18,10 +18,12 @@ def validUTF8(data):
             Mask >>= 1
             i += 1
         return i
-    for index in range(len(data)):
+    index = 0
+    while(index < len(data)):
         num = data[index] % 256
         i = check(num)
         if i == 0:
+            index += 1
             continue
         elif i == 1:
             return False
@@ -31,4 +33,9 @@ def validUTF8(data):
             num = data[index + j] % 256
             if not (check(num) == 1):
                 return False
+        index += i
     return True
+
+
+data = [197,130,1]
+print(validUTF8(data))
