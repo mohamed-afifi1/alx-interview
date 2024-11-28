@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+coin change problem
+"""
 
 def makeChange(coins, total):
     """
