@@ -16,6 +16,4 @@ def makeChange(coins, total):
         for coin in coins:
             if i - coin >= 0:
                 db[i] = min(db[i], 1 + db[i - coin])
-    if db[total] == total + 1:
-        return -1
-    return db[total]
+    return db[total] if db[total] <= total else -1
