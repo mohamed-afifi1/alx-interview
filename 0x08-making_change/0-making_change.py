@@ -10,11 +10,9 @@ def makeChange(coins, total):
     """
     if total <= 0:
         return 0
-    db = {}
+    db = [total + 1] * (total + 1)
     db[0] = 0
     for i in range(1, total + 1):
-        if db[i] == 0:
-            db[i] = total + 1
         for coin in coins:
             if i - coin >= 0:
                 db[i] = min(db[i], 1 + db[i - coin])
