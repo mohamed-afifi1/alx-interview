@@ -8,6 +8,9 @@ def isWinner(x, nums):
     """
     Maria or Ben
     """
+    if x is None or nums == [] or x == 0 or nums is None:
+        return None
+
     def primes(n):
         """
         Return all primes up to n
