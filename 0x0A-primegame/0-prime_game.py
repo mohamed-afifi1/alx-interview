@@ -21,7 +21,7 @@ def isWinner(x, nums):
                 for i in range(x*x, n + 1, x):
                     sieve[i] = False
         res = 0
-        for p in range(n + 1):
+        for p in range(2, n + 1):
             if sieve[p]:
                 res += p
         return res
